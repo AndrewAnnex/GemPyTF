@@ -1,11 +1,8 @@
 # %%
-import sys
-sys.path.append('../GP_old/')
+import gempytf as gp
 
-import gempy as gp
-
-from gempy import map_series_to_surfaces
-from gempy.core.tensor.modeltf import ModelTF
+from gempytf import map_series_to_surfaces
+from gempytf.core.tensor.modeltf import ModelTF
 
 # %%
 geo_model = gp.create_model('Greenstone')

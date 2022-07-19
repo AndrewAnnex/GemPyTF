@@ -1,0 +1,8 @@
+vtk
+pyvista
+gdal
+pymc
+pyvolume
+pyevtk
+pyqrcode
+mplstereonet

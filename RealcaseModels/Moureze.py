@@ -1,11 +1,9 @@
 # %%
-import sys
-sys.path.append('../GP_old/')
 
-import gempy as gp
+import gempytf as gp
 
-from gempy import map_series_to_surfaces
-from gempy.core.tensor.modeltf import ModelTF
+from gempytf import map_series_to_surfaces
+from gempytf.core.tensor.modeltf import ModelTF
 
 import pandas as pn
 # %%
