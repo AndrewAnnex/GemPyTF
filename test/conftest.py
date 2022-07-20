@@ -1,5 +1,5 @@
 import pytest
-import gempytf.core.gempytf_api as gempytf
+import gempytf.core.gempy_api as gempytf
 import gempytf as gp
 
 import os
