@@ -1,10 +1,10 @@
 import pytest
 import numpy as np
-import gempy as gp
+import gempytf as gp
 import sys
 import os
 input_path = os.path.dirname(__file__)
-import gempy.utils.input_manipulation as im
+import gempytf.utils.input_manipulation as im
 
 
 def test_find_interfaces():

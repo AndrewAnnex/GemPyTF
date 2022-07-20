@@ -1,6 +1,6 @@
 import os
 import pytest
-import gempy as gp
+import gempytf as gp
 
 input_path = os.path.dirname(__file__) + '/../../notebooks/data'
 
@@ -8,12 +8,12 @@ input_path = os.path.dirname(__file__) + '/../../notebooks/data'
 @pytest.mark.skipif("TRAVIS" in os.environ and os.environ["TRAVIS"] == "true",
                     reason="Skipping this test on Travis CI.")
 class TestVista:
-    from gempy.plot import vista as vs
+    from gempytf.plot import vista as vs
 
     @pytest.fixture(scope='module')
     def vista_obj(self) -> vs.Vista:
-        """Return a GemPy Vista instance with basic geomodel attached."""
-        from gempy.plot import vista as vs
+        """Return a gempytf Vista instance with basic geomodel attached."""
+        from gempytf.plot import vista as vs
 
         geo_model = gp.create_data(
             [0, 2000, 0, 2000, 0, 2000], [50, 50, 50],

@@ -1,12 +1,5 @@
-import pytest
-
-import theano
-import numpy as np
-import sys, os
-sys.path.append("../..")
-import gempy as gp
-import matplotlib.pyplot as plt
-import pdb
+import os
+import gempytf as gp
 
 input_path = os.path.dirname(__file__)+'/../../notebooks/data'
 

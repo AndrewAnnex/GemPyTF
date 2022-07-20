@@ -1,4 +1,4 @@
-import gempy as gp
+import gempytf as gp
 import matplotlib.pyplot as plt
 import pandas as pn
 import numpy as np
@@ -8,13 +8,13 @@ input_path = os.path.dirname(__file__)+'/../input_data'
 
 # ## Preparing the Python environment
 #
-# For modeling with GemPy, we first need to import it. We should also import any other packages we want to
+# For modeling with gempytf, we first need to import it. We should also import any other packages we want to
 # utilize in our Python environment.Typically, we will also require `NumPy` and `Matplotlib` when working
-# with GemPy. At this point, we can further customize some settings as desired, e.g. the size of figures or,
+# with gempytf. At this point, we can further customize some settings as desired, e.g. the size of figures or,
 # as we do here, the way that `Matplotlib` figures are displayed in our notebook (`%matplotlib inline`).
 
 
-# These two lines are necessary only if GemPy is not installed
+# These two lines are necessary only if gempytf is not installed
 import sys, os
 sys.path.append("../..")
 

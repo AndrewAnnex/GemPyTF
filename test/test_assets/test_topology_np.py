@@ -1,6 +1,6 @@
 import pytest
-import gempy as gp
-from gempy.assets import topology as tp
+import gempytf as gp
+from gempytf.assets import topology as tp
 from pickle import load
 import os
 import numpy as np
@@ -10,7 +10,7 @@ data_path = Path(os.path.dirname(__file__)+'/../../notebooks/data/input_data/')
 
 @pytest.fixture(scope='module')
 def topology_fabian():
-    """Return a GemPy Vista instance with basic geomodel attached."""
+    """Return a gempytf Vista instance with basic geomodel attached."""
     geo_model = gp.create_data(
         [0, 2000, 0, 2000, 0, 2000], [50, 50, 50],
         path_o=data_path / 'tut_chapter1/simple_fault_model_orientations.csv',

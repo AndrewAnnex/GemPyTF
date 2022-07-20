@@ -1,11 +1,11 @@
-# These two lines are necessary only if GemPy is not installed
+# These two lines are necessary only if gempytf is not installed
 import sys, os
 sys.path.append("../..")
 
-# Importing GemPy
-import gempy as gp
-from gempy.assets.geophysics import GravityPreprocessing
-from gempy.core.grid_modules.grid_types import CenteredGrid
+# Importing gempytf
+import gempytf as gp
+from gempytf.assets.geophysics import GravityPreprocessing
+from gempytf.core.grid_modules.grid_types import CenteredGrid
 
 # Importing auxiliary libraries
 import numpy as np

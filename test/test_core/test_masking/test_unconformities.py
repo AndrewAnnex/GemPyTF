@@ -1,12 +1,11 @@
 
 
-# These two lines are necessary only if GemPy is not installed
-import sys, os
-sys.path.append("../..")
+# These two lines are necessary only if gempytf is not installed
+import os
 input_path = os.path.dirname(__file__)+'/../../input_data'
 
-# Importing GemPy
-import gempy as gp
+# Importing gempytf
+import gempytf as gp
 
 
 # Importing auxiliary libraries

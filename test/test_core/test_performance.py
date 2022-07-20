@@ -4,7 +4,7 @@ import theano
 import numpy as np
 import sys, os
 sys.path.append("../..")
-import gempy
+import gempytf
 import matplotlib.pyplot as plt
 import pdb
 
@@ -16,24 +16,24 @@ class TestPerfomance:
         # TODO Update!!!
         #
         # # Importing the data from csv files and settign extent and resolution
-        # geo_model = gempy.read_pickle(os.path.dirname(__file__)+"/input_data/geo_model.pickle")
+        # geo_model = gempytf.read_pickle(os.path.dirname(__file__)+"/input_data/geo_model.pickle")
         # geo_model.surface_points['formation'] = geo_model.surface_points['formation'].astype('category')
         # geo_model.orientations['formation'] = geo_model.orientations['formation'].astype('category')
         # geo_model.add_orientation(X=-2.88043478e+04, Y=6.21413043e+06, Z=-1.17648965e+02, dip=0, azimuth=0, polarity=1,
         #                          formation='basement')
         # geo_model.faults_relations_df = None
-        # new_grid = gempy.GridClass()
+        # new_grid = gempytf.GridClass()
         # res = 100
         #
         # # Create a new grid object with the new resolution
         # new_grid.set_regular_grid(geo_model.extent, [res, res, res])
         #
         # # Setting the new grid to the geodata
-        # gempy.set_grid(geo_model, new_grid)
+        # gempytf.set_grid(geo_model, new_grid)
         #
         # n_faults = 0
         #
-        # interp_data = gempy.InterpolatorData(geo_model, dtype='float32', compile_theano=False, verbose=[],
+        # interp_data = gempytf.InterpolatorData(geo_model, dtype='float32', compile_theano=False, verbose=[],
         #                                      theano_optimizer='fast_run')
         #
         # interp_data.interpolator.tg.fault_matrix = theano.tensor.zeros((n_faults * 2,

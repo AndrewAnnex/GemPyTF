@@ -1,10 +1,9 @@
-# These two lines are necessary only if GemPy is not installed
+# These two lines are necessary only if gempytf is not installed
 import sys, os
-sys.path.append("../..")
 
-# Importing GemPy
-import gempy as gp
-from gempy.assets.geophysics import MagneticsPreprocessing
+# Importing gempytf
+import gempytf as gp
+from gempytf.assets.geophysics import MagneticsPreprocessing
 
 # Importing auxiliary libraries
 import numpy as np

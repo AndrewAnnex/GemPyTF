@@ -1,5 +1,5 @@
 import sys, os
-# Path to development gempy
+# Path to development gempytf
 sys.path.append('../../..')
 
 # Path to development pynoddy
@@ -13,7 +13,7 @@ from matplotlib import rcParams
 rcParams['font.size'] = 15
 # determine path of repository to set paths corretly below
 repo_path = os.path.realpath('../../..')
-import gempy as gp
+import gempytf as gp
 import pynoddy
 
 import pynoddy.history
@@ -34,5 +34,5 @@ y = [0,100,200]
 layers = [1]
 
 for l in layers:
-    i_df = ex.export_interfaces_gempy(x, y, layer=l, group_id="l"+str(l)+"_a")
+    i_df = ex.export_interfaces_gempytf(x, y, layer=l, group_id="l"+str(l)+"_a")
    # gp.set_surface_points(geo_model, i_df, append=True)

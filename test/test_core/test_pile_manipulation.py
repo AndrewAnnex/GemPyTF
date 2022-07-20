@@ -1,4 +1,4 @@
-import gempy as gp
+import gempytf as gp
 import matplotlib.pyplot as plt
 import pandas as pn
 import numpy as np
@@ -8,20 +8,20 @@ input_path = os.path.dirname(__file__)+'/../input_data'
 
 # ## Preparing the Python environment
 #
-# For modeling with GemPy, we first need to import it. We should also import any other packages we want to
+# For modeling with gempytf, we first need to import it. We should also import any other packages we want to
 # utilize in our Python environment.Typically, we will also require `NumPy` and `Matplotlib` when working
-# with GemPy. At this point, we can further customize some settings as desired, e.g. the size of figures or,
+# with gempytf. At this point, we can further customize some settings as desired, e.g. the size of figures or,
 # as we do here, the way that `Matplotlib` figures are displayed in our notebook (`%matplotlib inline`).
 
 
-# These two lines are necessary only if GemPy is not installed
+# These two lines are necessary only if gempytf is not installed
 import sys, os
 sys.path.append("../..")
 
 import sys, os
 
-sys.path.append("../../../gempy")
-import gempy as gp
+sys.path.append("../../../gempytf")
+import gempytf as gp
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -131,7 +131,7 @@ def test_pile_geomodel_2():
     gp.plot.plot_section(geo_model, cell_number=25,
                          direction='y', show_data=True)
 
-    from gempy.plot.plot_api import plot_2d
+    from gempytf.plot.plot_api import plot_2d
 
     p = plot_2d(geo_model, cell_number=[25])
 
@@ -166,7 +166,7 @@ def test_complete_model(tmpdir):
         gp.set_interpolator(geo_model, theano_optimizer='fast_compile', update_kriging=True,
                         verbose=[])
 
-    from gempy.plot import visualization_2d_pro as vv
+    from gempytf.plot import visualization_2d_pro as vv
 
     # In this case perpendicular to the z axes
     p2d = vv.Plot2D(geo_model)

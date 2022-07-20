@@ -1,11 +1,11 @@
 import pytest
-import gempy.core.gempy_api as gempy
-import gempy as gp
+import gempytf.core.gempytf_api as gempytf
+import gempytf as gp
 
-import sys, os
+import os
 
 input_path = os.path.dirname(__file__)+'/input_data'
-input_path2 = os.path.dirname(__file__)+'/../../notebooks/data'
+input_path2 = os.path.dirname(__file__)+'/../notebooks/data'
 
 
 @pytest.fixture(scope='session')
@@ -18,7 +18,7 @@ def interpolator():
                                  path_o=input_path + "/GeoModeller/test_a/test_a_Foliations.csv",
                                  path_i=input_path + "/GeoModeller/test_a/test_a_Points.csv")
 
-    gempy.set_interpolation_data(geo_model,  grid=None, compile_theano=True)
+    gempytf.set_interpolation_data(geo_model,  grid=None, compile_theano=True)
     return geo_model.interpolator
 
 
@@ -57,18 +57,18 @@ def interpolator_islith_nofault():
                                  path_o=input_path + "/GeoModeller/test_a/test_a_Foliations.csv",
                                  path_i=input_path + "/GeoModeller/test_a/test_a_Points.csv")
 
-    interpolator = gempy.set_interpolation_data(geo_model, grid=None, compile_theano=True)
+    interpolator = gempytf.set_interpolation_data(geo_model, grid=None, compile_theano=True)
     return interpolator
 
 
 @pytest.fixture(scope='session')
 def theano_f():
     # Importing the data from csv files and settign extent and resolution
-    geo_data = gempy.create_data([0, 10, 0, 10, -10, 0], [50, 50, 50],
+    geo_data = gempytf.create_data([0, 10, 0, 10, -10, 0], [50, 50, 50],
                                  path_o=input_path + "/GeoModeller/test_a/test_a_Foliations.csv",
                                  path_i=input_path + "/GeoModeller/test_a/test_a_Points.csv")
 
-    interp_data = gempy.InterpolatorData(geo_data, dtype='float64', compile_theano=True,
+    interp_data = gempytf.InterpolatorData(geo_data, dtype='float64', compile_theano=True,
                                          verbose=[])
     return interp_data
 
@@ -76,26 +76,26 @@ def theano_f():
 @pytest.fixture(scope='session')
 def theano_f_1f():
     # Importing the data from csv files and settign extent and resolution
-    geo_data = gempy.create_data([0, 10, 0, 10, -10, 0], [50, 50, 50],
+    geo_data = gempytf.create_data([0, 10, 0, 10, -10, 0], [50, 50, 50],
                                  path_o=input_path+"/GeoModeller/test_d/test_d_Foliations.csv",
                                  path_i=input_path+"/GeoModeller/test_d/test_d_Points.csv")
 
-    gempy.set_series(geo_data, {'series': ('A', 'B'),
+    gempytf.set_series(geo_data, {'series': ('A', 'B'),
                                 'fault1': 'f1'}, order_series=['fault1', 'series'])
 
-    interp_data = gempy.InterpolatorData(geo_data, dtype='float64', compile_theano=True, verbose=[])
+    interp_data = gempytf.InterpolatorData(geo_data, dtype='float64', compile_theano=True, verbose=[])
     return interp_data
 
 
 @pytest.fixture(scope='session')
 def theano_f_grav():
     # Importing the data from csv files and settign extent and resolution
-    geo_data = gempy.create_data([0, 10, 0, 10, -10, 0], [50, 50, 50],
+    geo_data = gempytf.create_data([0, 10, 0, 10, -10, 0], [50, 50, 50],
                                  path_o=input_path + "/GeoModeller/test_a/test_a_Foliations.csv",
                                  path_i=input_path + "/GeoModeller/test_a/test_a_Points.csv")
 
-    gempy.set_series(geo_data, {'series': ('A', 'B'),
+    gempytf.set_series(geo_data, {'series': ('A', 'B'),
                                 'fault1': 'f1'}, order_series=['fault1', 'series'])
 
-    interp_data = gempy.InterpolatorData(geo_data, dtype='float64', compile_theano=True, output='gravity', verbose=[])
+    interp_data = gempytf.InterpolatorData(geo_data, dtype='float64', compile_theano=True, output='gravity', verbose=[])
     return interp_data

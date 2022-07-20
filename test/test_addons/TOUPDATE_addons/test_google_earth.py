@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# # 3 - 3D Modeling with GemPy
+# # 3 - 3D Modeling with gempytf
 
 # In[1]:
 
@@ -10,13 +10,13 @@ use("Agg")
 
 import sys
 import numpy as np
-# These two lines are necessary only if gempy is not installed
-sys.path.append("../../gempy/")
+# These two lines are necessary only if gempytf is not installed
+sys.path.append("../../gempytf/")
 sys.path.append("../../../remote-geomod/rgeomod")
-sys.path.append("../gempy/")
+sys.path.append("../gempytf/")
 sys.path.append("/home/miguel/PycharmProjects/remote-geomod/")
-# Importing gempy
-import gempy as gp
+# Importing gempytf
+import gempytf as gp
 import pytest
 
 #import gdal
@@ -35,8 +35,8 @@ input_path = os.path.dirname(__file__)+'/../input_data'
 def TOUPDATE_rgeomod_integration(theano_f):
     geo_data=gp.create_data(extent=[612000, 622000, 2472000, 2480000, -1000, 1000],
                             resolution=[50, 50, 50],
-                            path_f=input_path+"/gempy_foliations.csv",
-                            path_i=input_path+"/gempy_interfaces.csv")
+                            path_f=input_path+"/gempytf_foliations.csv",
+                            path_i=input_path+"/gempytf_interfaces.csv")
 
 
 
@@ -90,7 +90,7 @@ def TOUPDATE_rgeomod_integration(theano_f):
     plt.colorbar(dtmp, label="Elevation [m]");
     plt.savefig(input_path+"temp/DTM.pdf")
 
-    # To be able to use gempy plot functionality we need to create a dummy geo_model object with the
+    # To be able to use gempytf plot functionality we need to create a dummy geo_model object with the
     # resoluion we want. In this case resolution=[339, 271, 1]
     import copy
     geo_data_dummy = copy.deepcopy(geo_data)
@@ -98,8 +98,8 @@ def TOUPDATE_rgeomod_integration(theano_f):
 
 
 
-    # convert the dtm to a gempy-suitable raveled grid
-    points = rgeomod.convert_dtm_to_gempy_grid(raster, dtm)
+    # convert the dtm to a gempytf-suitable raveled grid
+    points = rgeomod.convert_dtm_to_gempytf_grid(raster, dtm)
 
 
     # Now we can use the function `compute_model_at` to get the lithology values at a specific location:
@@ -161,7 +161,7 @@ def TOUPDATE_rgeomod_integration(theano_f):
 
     t = input_path+"/templates/ge_template_raw_interf.xml"
     pt = input_path+"/templates/ge_placemark_template_interf.xml"
-    rgeomod.gempy_export_points_to_kml(input_path, geo_data, pt, t, gp.plotting.colors.cmap)
+    rgeomod.gempytf_export_points_to_kml(input_path, geo_data, pt, t, gp.plotting.colors.cmap)
 
 
     # Export the foliation data:
@@ -170,4 +170,4 @@ def TOUPDATE_rgeomod_integration(theano_f):
 
     t = input_path+"/templates/ge_template_raw_fol.xml"
     pt = input_path+"/templates/ge_placemark_template_fol.xml"
-    rgeomod.gempy_export_fol_to_kml(input_path+"temp/dips.kml", geo_data, pt, t)
+    rgeomod.gempytf_export_fol_to_kml(input_path+"temp/dips.kml", geo_data, pt, t)

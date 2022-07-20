@@ -1,11 +1,5 @@
-
-
-# These two lines are necessary only if GemPy is not installed
-import sys, os
-sys.path.append("../..")
-
-# Importing GemPy
-import gempy as gp
+# Importing gempytf
+import gempytf as gp
 
 
 # Importing auxiliary libraries
