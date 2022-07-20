@@ -227,13 +227,13 @@ def create_grid():
     return grid
 
 
-@pytest.fixture('module')
+@pytest.fixture(scope='module')
 def create_rescaling(create_surface_points, create_orientations, create_grid):
     rescaling = gp.RescaledData(create_surface_points, create_orientations, create_grid)
     return rescaling
 
 
-@pytest.fixture('module')
+@pytest.fixture(scope='module')
 def create_additional_data(create_surface_points, create_orientations, create_grid, create_faults,
                            create_surfaces, create_rescaling):
 
