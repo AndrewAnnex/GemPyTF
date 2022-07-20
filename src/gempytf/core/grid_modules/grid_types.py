@@ -598,7 +598,7 @@ class Topography:
                                                       anti_aliasing=False, preserve_range=True)
 
     def show(self):
-        from gempy.plot.helpers import add_colorbar
+        from gempytf.plot.helpers import add_colorbar
         if self.type == 'artificial':
             fig, ax = plt.subplots()
             CS= ax.contour(self.values_3D[:, :, 2], extent=(self.extent[:4]), colors='k', linestyles='solid')

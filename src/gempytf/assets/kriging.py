@@ -14,7 +14,7 @@ except ImportError:
 
 import numpy as np
 import pandas as pd
-from gempy.plot import visualization_2d, plot, helpers
+from gempytf.plot import visualization_2d, plot, helpers
 import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 from copy import deepcopy

@@ -922,7 +922,7 @@ class PlotSolution(PlotData2D):
             ve (float, optional): Vertical exaggeration. Defaults to 1.
 
         Returns:
-            (gempy.plot.visualization_2d.PlotData2D) Block section plot.
+            (gempytf.plot.visualization_2d.PlotData2D) Block section plot.
         """
         if block is None:
             _block = solution.lith_block

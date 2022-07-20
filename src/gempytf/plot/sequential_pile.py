@@ -18,9 +18,9 @@
 import numpy as np
 import pandas as pn
 import matplotlib.pyplot as plt
-#from gempy.plot.colors import *
+#from gempytf.plot.colors import *
 #import matplotlib.cm as cm
-#from gempy.plot.colors import color_lot, cmap, norm
+#from gempytf.plot.colors import color_lot, cmap, norm
 
 def set_anchor_points(series_object, surface_object):
     """
