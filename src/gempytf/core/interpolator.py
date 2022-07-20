@@ -95,7 +95,7 @@ class Interpolator(object):
         if output is None:
             output = ['geology']
 
-        import gempy.core.theano.theano_graph_pro as tg
+        import gempytf.core.theano.theano_graph_pro as tg
         import importlib
         importlib.reload(tg)
 
@@ -500,7 +500,7 @@ class InterpolatorGravity:
         self.theano_graph.tz.set_value(tz.astype(self.dtype))
 
     def calculate_tz(self, centered_grid):
-        from gempy.assets.geophysics import GravityPreprocessing
+        from gempytf.cassets.geophysics import GravityPreprocessing
         g = GravityPreprocessing(centered_grid)
 
         return g.set_tz_kernel()
@@ -530,7 +530,7 @@ class InterpolatorMagnetics:
         self.theano_graph.V.set_value(V.astype(self.dtype))
 
     def calculate_V(self, centered_grid):
-        from gempy.assets.geophysics import MagneticsPreprocessing
+        from gempytf.cassets.geophysics import MagneticsPreprocessing
         Vmodel = MagneticsPreprocessing(centered_grid).set_Vs_kernel()
 
         return Vmodel

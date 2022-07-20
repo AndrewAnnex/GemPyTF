@@ -398,10 +398,10 @@ def plot_ar(geo_model, path=None, project_name=None, api_token=None, secret=None
         secret: rexos secret
 
     Returns:
-        gempy.addons.rex_api.Rextag
+        gempytf.addons.rex_api.Rextag
     """
-    from gempy.addons.rex_api import upload_to_rexcloud
-    from gempy.addons.gempy_to_rexfile import geo_model_to_rex
+    from gempytf.addons.rex_api import upload_to_rexcloud
+    from gempytf.addons.gempy_to_rexfile import geo_model_to_rex
     if project_name is None:
         project_name = geo_model.meta.project_name
 

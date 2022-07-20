@@ -1,11 +1,11 @@
 import numpy as np
-from gempy.core.data import SurfacePoints, Orientations, Grid, Surfaces, Series, Faults, AdditionalData
+from gempytf.core.data import SurfacePoints, Orientations, Grid, Surfaces, Series, Faults, AdditionalData
 import tensorflow as tf
-from gempy.core.tensor.tensorflow_graph_uncon_sig_fault import TFGraph
-from gempy.core.solution import Solution
-from gempy.core.model import DataMutation
-from gempy.assets.geophysics import *
-from gempy.core.grid_modules.grid_types import CenteredRegGrid
+from gempytf.core.tensor.tensorflow_graph_uncon_sig_fault import TFGraph
+from gempytf.core.solution import Solution
+from gempytf.core.model import DataMutation
+from gempytf.cassets.geophysics import *
+from gempytf.core.grid_modules.grid_types import CenteredRegGrid
 
 class ModelTF(DataMutation):
     def __init__(self,geo_data) -> None:

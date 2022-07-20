@@ -10,7 +10,7 @@ import warnings
 from .data import AdditionalData, Faults, Grid, MetaData, Orientations, RescaledData, Series, SurfacePoints,\
     Surfaces, Options, Structure, KrigingParameters
 from .solution import Solution
-# from gempy.core.interpolator import InterpolatorModel, InterpolatorGravity
+# from gempytf.core.interpolator import InterpolatorModel, InterpolatorGravity
 
 ## This is the tensorflow interpolator initializer
 from .interpolator_pro import InterpolatorTF
@@ -1171,7 +1171,7 @@ class Model(DataMutation, ABC):
            path (str): path where save the pickle
 
         Returns:
-            :class:`gempy.core.model.Model`
+            :class:`gempytf.core.model.Model`
 
         """
         import pickle

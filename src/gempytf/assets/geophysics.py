@@ -16,7 +16,7 @@
 """
 
 import numpy as np
-from gempy.core.grid_modules.grid_types import CenteredGrid,RegularGrid
+from gempytf.core.grid_modules.grid_types import CenteredGrid,RegularGrid
 
 class Receivers(object):
     '''

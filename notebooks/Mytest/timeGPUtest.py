@@ -6,11 +6,11 @@ import timeit
 sys.path.append("../..")
 sys.path.append("../../..")
 
-from gempy.core.tensor.tensorflow_graph import TFGraph
+from gempytf.core.tensor.tensorflow_graph import TFGraph
 import tensorflow as tf
 import pandas as pd
 from gempy import create_data, map_series_to_surfaces
-from gempy.assets.geophysics import GravityPreprocessing
+from gempytf.cassets.geophysics import GravityPreprocessing
 
 
 def Plot_2D_scaler_field(grid, scaler_field):

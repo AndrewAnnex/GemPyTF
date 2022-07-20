@@ -85,7 +85,7 @@ class Solution(object):
 
         Args:
             values (list[np.array]): list with result of the theano evaluation (values returned by
-             :func:`gempy.compute_model` function):
+             :func:`gempytf.compute_model` function):
                  - block_matrix
                  - weights_vector
                  - scalar_field_matrix
@@ -125,7 +125,7 @@ class Solution(object):
         Set all solution values to the correspondent attribute
 
         Args:
-            values (np.ndarray): values returned by `function: gempy.compute_model` function
+            values (np.ndarray): values returned by `function: gempytf.compute_model` function
             compute_mesh (bool): if true compute automatically the grid
 
         Returns:

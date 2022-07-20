@@ -1,6 +1,6 @@
 import pytest
 
-import theano
+
 import numpy as np
 import sys, os
 sys.path.append("../..")

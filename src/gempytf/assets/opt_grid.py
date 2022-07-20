@@ -3,7 +3,7 @@ Author:@Zhouji Liang
 optimization grid based on T_z of each cell
 """
 import tensorflow as tf
-from gempy.core.grid_modules.grid_types import CenteredGrid,RegularGrid
+from gempytf.core.grid_modules.grid_types import CenteredGrid,RegularGrid
 
 ## auxiliary functions
 

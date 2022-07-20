@@ -58,11 +58,11 @@ class Grid(object):
          **kwargs: See below
 
     Keyword Args:
-         regular (:class:`gempy.core.grid_modules.grid_types.RegularGrid`): [s0]
-         custom (:class:`gempy.core.grid_modules.grid_types.CustomGrid`): [s1]
-         topography (:class:`gempy.core.grid_modules.grid_types.Topography`): [s2]
-         sections (:class:`gempy.core.grid_modules.grid_types.Sections`): [s3]
-         gravity (:class:`gempy.core.grid_modules.grid_types.Gravity`):
+         regular (:class:`gempytf.core.grid_modules.grid_types.RegularGrid`): [s0]
+         custom (:class:`gempytf.core.grid_modules.grid_types.CustomGrid`): [s1]
+         topography (:class:`gempytf.core.grid_modules.grid_types.Topography`): [s2]
+         sections (:class:`gempytf.core.grid_modules.grid_types.Sections`): [s3]
+         gravity (:class:`gempytf.core.grid_modules.grid_types.Gravity`):
 
     Attributes:
         values (np.ndarray): coordinates where the model is going to be evaluated. This are the coordinates
@@ -74,11 +74,11 @@ class Grid(object):
         grid_types(np.ndarray[str]): names of the current grids of GemPy
         active_grids(np.ndarray[bool]): boolean array which control which type of grid is going to be computed and
          hence on the property `values`.
-        regular_grid (:class:`gempy.core.grid_modules.grid_types.RegularGrid`)
-        custom_grid (:class:`gempy.core.grid_modules.grid_types.CustomGrid`)
-        topography (:class:`gempy.core.grid_modules.grid_types.Topography`)
-        sections (:class:`gempy.core.grid_modules.grid_types.Sections`)
-        gravity_grid (:class:`gempy.core.grid_modules.grid_types.Gravity`)
+        regular_grid (:class:`gempytf.core.grid_modules.grid_types.RegularGrid`)
+        custom_grid (:class:`gempytf.core.grid_modules.grid_types.CustomGrid`)
+        topography (:class:`gempytf.core.grid_modules.grid_types.Topography`)
+        sections (:class:`gempytf.core.grid_modules.grid_types.Sections`)
+        gravity_grid (:class:`gempytf.core.grid_modules.grid_types.Gravity`)
     """
 
     def __init__(self, **kwargs):
@@ -163,7 +163,7 @@ class Grid(object):
             if source = 'saved':
                 filepath:   path to the .npy file that was created using the topography.save() function
 
-        Returns: :class:gempy.core.data.Topography
+        Returns: :class:gempytf.core.data.Topography
         """
         self.topography = grid_types.Topography(self.regular_grid)
 

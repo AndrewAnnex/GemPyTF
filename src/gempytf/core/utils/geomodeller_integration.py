@@ -20,7 +20,7 @@ with Uncertainty_Obj module)
 from pylab import *
 import copy
 import pandas as pn
-import gempy as gp
+import gempytf as gp
 import numpy as np
 
 # python module to wrap GeoModeller XML file and perform all kinds of data

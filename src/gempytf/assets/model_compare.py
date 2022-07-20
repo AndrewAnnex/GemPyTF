@@ -17,11 +17,11 @@ def Plot_2D_scaler_field(grid, scaler_field):
 
 if __name__ == '__main__':
 
-    from gempy.core.tensor.tensorflow_graph import TFGraph
+    from gempytf.core.tensor.tensorflow_graph import TFGraph
     import tensorflow as tf
     import pandas as pd
-    import gempy as gp
-    from gempy.assets.geophysics import GravityPreprocessing
+    import gempytf as gp
+    from gempytf.cassets.geophysics import GravityPreprocessing
 
     geo_data = gp.create_data([0, 1000, 0, 1000, 0, 1000], resolution=[50, 50, 50],
                               path_o=os.pardir + "/../notebooks/data/input_data/jan_models/model2_orientations.csv",

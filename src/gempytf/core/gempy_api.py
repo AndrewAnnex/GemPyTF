@@ -231,7 +231,7 @@ def get_th_fn(model: Model):
     Get the compiled theano function
 
     Args:
-        model (:class:`gempy.core.model.Model`)
+        model (:class:`gempytf.core.model.Model`)
 
     Returns:
         :class:`theano.compile.function_module.Function`: Compiled function if C or CUDA which computes the interpolation given the input data
@@ -333,7 +333,7 @@ def compute_model_at(new_grid: Union[ndarray], model: Model, **kwargs):
     This function creates a new custom grid and deactivate all the other grids and compute the model there:
 
     This function does the same as :func:`compute_model` plus the addition functionallity of
-     passing a given array of points where evaluate the model instead of using the :class:`gempy.core.data.GridClass`.
+     passing a given array of points where evaluate the model instead of using the :class:`gempytf.core.data.GridClass`.
 
     Args:
         kwargs: :func:`compute_model` arguments
@@ -382,7 +382,7 @@ def get_data(model: Model, itype='data', numeric=False):
     object.
 
     Args:
-        model (:class:`gempy.core.model.Model`)
+        model (:class:`gempytf.core.model.Model`)
         itype(str {'all', 'surface_points', 'orientations', 'surfaces', 'series', 'faults', 'faults_relations',
         additional data}): input data type to be retrieved.
         numeric (bool): if True it only returns numerical properties. This may be useful due to memory issues
@@ -398,9 +398,9 @@ def get_data(model: Model, itype='data', numeric=False):
 def create_data(extent: Union[list, ndarray], resolution: Union[list, ndarray] = (50, 50, 50),
                 project_name: str = 'default_project', **kwargs) -> Model:
     """
-    Create a :class:`gempy.core.model.Model` object and initialize some of the main functions such as:
+    Create a :class:`gempytf.core.model.Model` object and initialize some of the main functions such as:
 
-    - Grid :class:`gempy.core.data.GridClass`: To regular grid.
+    - Grid :class:`gempytf.core.data.GridClass`: To regular grid.
     - read_csv: SurfacePoints and orientations: From csv files
     - set_values to default
 
@@ -430,9 +430,9 @@ def init_data(geo_model: Model, extent: Union[list, ndarray] = None,
               resolution: Union[list, ndarray] = None,
               **kwargs) -> Model:
     """
-    Create a :class:`gempy.core.model.Model` object and initialize some of the main functions such as:
+    Create a :class:`gempytf.core.model.Model` object and initialize some of the main functions such as:
 
-    - Grid :class:`gempy.core.data.GridClass`: To regular grid.
+    - Grid :class:`gempytf.core.data.GridClass`: To regular grid.
     - read_csv: SurfacePoints and orientations: From csv files
     - set_values to default
 
@@ -494,7 +494,7 @@ def activate_interactive_df(geo_model: Model, plot_object=None):
         :class:`QgridModelIntegration`
     """
     try:
-        from gempy.core.qgrid_integration import QgridModelIntegration
+        from gempytf.core.qgrid_integration import QgridModelIntegration
     except ImportError:
         raise ImportError('qgrid package is not installed. No interactive dataframes available.')
     geo_model.qi = QgridModelIntegration(geo_model, plot_object)

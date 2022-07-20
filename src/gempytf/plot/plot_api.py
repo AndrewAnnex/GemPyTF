@@ -263,7 +263,7 @@ if PYVISTA_IMPORT:
 
         Args:
 
-            model (:class:`gempy.core.model.Project`): Container class of all
+            model (:class:`gempytf.core.model.Project`): Container class of all
             objects that constitute a GemPy model.
             plotter_type: PyVista plotter types. Supported plotters are:
             'basic', 'background', and 'notebook'.

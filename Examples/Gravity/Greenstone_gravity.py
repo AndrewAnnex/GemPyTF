@@ -3,9 +3,9 @@ import sys
 sys.path.append('../../GP_old/')
 
 import numpy as np
-import gempy as gp
-from gempy.core.tensor.modeltf import ModelTF
-from gempy.assets.geophysics import *
+import gempytf as gp
+from gempytf.core.tensor.modeltf import ModelTF
+from gempytf.cassets.geophysics import *
 import tensorflow as tf
 import matplotlib.pyplot as plt
 
@@ -76,7 +76,7 @@ tz = tf.constant(tz,model.tfdtype)
 grav = model.compute_gravity(tz,g = g,receivers = receivers,method = 'conv_all')
 
 ## Kernel Regular Grid
-# from gempy.core.grid_modules.grid_types import CenteredRegGrid
+# from gempytf.core.grid_modules.grid_types import CenteredRegGrid
 # centerReg_kernel = CenteredRegGrid(receivers.xy_ravel,radius=receivers.model_radius,resolution=[25,25,25])
 # model.activate_customized_grid(centerReg_kernel)
 # gpinput = model.get_graph_input()

@@ -27,7 +27,7 @@ def lithblock_to_lb_fb(geo_model) -> tuple:
     rounded integer arrays).
     
     Args:
-        geo_model (gempy.core.model.Model): GemPy Model instance with solutions.
+        geo_model (gempytf.core.model.Model): GemPy Model instance with solutions.
     
     Returns:
         (tuple) of np.ndarray's containing the lithilogy id block
@@ -42,7 +42,7 @@ def get_fault_ids(geo_model) -> np.array:
     """Get surface id's for all faults in given geomodel.
     
     Args:
-        geo_model (gempy.core.model.Model): GemPy Model instance with solutions.
+        geo_model (gempytf.core.model.Model): GemPy Model instance with solutions.
         
     Returns:
         (np.array) of int surface id's.
