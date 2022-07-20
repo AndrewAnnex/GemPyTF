@@ -9,17 +9,9 @@ Try the simple demos in colab: [![Open In Colab](https://colab.research.google.c
 ## Installation and dependency
 The current version is depend on an older version of GemPy-'2.1.1'
 
-TODO: Test and wrap this in a single installation file as e.g. `requirements.txt`
-- create conda environment `conda create --name gempytf python==3.7`
-- `git clone https://github.com/GeorgeLiang3/GemPyTF.git`
-- `pip install --upgrade pip`
-- `pip install tensorflow`
-- `conda install pandas`
-- `conda install scipy`
-- `pip install nptyping==1.0.1`
-- `conda install seaborn`
-- skimage < '0.18.2' and for MacOS < 10.13.6 need older skimage version `pip install -U scikit-image==0.17.2  ` [stackoverflow answer](https://stackoverflow.com/questions/65431999/it-seems-that-scikit-learn-has-not-been-built-correctly)
-
+- git clone this repo
+- create conda environment `conda env create --name gempytf --file env.yml`
+- `pip install -e .`
 ## Limitations
 At the moment there are only limited models are tested (in [Examples](/Examples/)). 
 
