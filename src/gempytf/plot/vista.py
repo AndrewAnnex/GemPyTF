@@ -41,8 +41,8 @@ try:
 except ImportError:
     PYVISTA_IMPORT = False
 
-import gempy as gp
-from gempy.plot.vista_aux import WidgetsCallbacks, RenderChanges
+import gempytf as gp
+from gempytf.plot.vista_aux import WidgetsCallbacks, RenderChanges
 import matplotlib
 
 warnings.filterwarnings("ignore",

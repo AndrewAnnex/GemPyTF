@@ -21,10 +21,6 @@ import matplotlib.pyplot as plt
 #from gempy.plot.colors import *
 #import matplotlib.cm as cm
 #from gempy.plot.colors import color_lot, cmap, norm
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from gempy.core.data import Series
-#import matplotlib.colors as mcolors
 
 def set_anchor_points(series_object, surface_object):
     """

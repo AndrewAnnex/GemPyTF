@@ -23,14 +23,10 @@
     @author: Alex Schaaf, Elisa Heim, Miguel de la Varga
 """
 
-# This is for sphenix to find the packages
-# sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
-
 from typing import Union,List, Any
 
 import matplotlib.pyplot as plt
-# from .vista import Vista
-# import gempy as _gempy
+
 import numpy as np
 import pandas as pn
 

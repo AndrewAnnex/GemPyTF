@@ -23,12 +23,10 @@
     @author: Elisa Heim, Miguel de la Varga
 """
 
-# This is for sphenix to find the packages
-# sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
 
 from typing import Set, Tuple, Dict, Union
 from nptyping import Array
-import gempy as _gempy
+import gempytf as _gempy
 from .visualization_2d import PlotData2D, PlotSolution
 from .visualization_3d import GemPyvtkInteract
 

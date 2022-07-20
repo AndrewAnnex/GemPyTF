@@ -30,7 +30,7 @@ import copy
 import pandas as pn
 import numpy as np
 import sys
-import gempy as gp
+import gempytf as gp
 import warnings
 
 
