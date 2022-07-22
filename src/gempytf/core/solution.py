@@ -162,7 +162,7 @@ class Solution(object):
 
         return True
 
-    @setdoc(measure.marching_cubes_lewiner.__doc__)
+    @setdoc(measure.marching_cubes.__doc__)
     def compute_marching_cubes_regular_grid(self, level: float, scalar_field, mask_array=None, classic=False,
                                             rescale=False, **kwargs):
         """
@@ -174,7 +174,7 @@ class Solution(object):
             mask_array (np.array): mask vector with trues where marching cubes has to be performed
             classic (bool): if True use original marching cubes without the masking functionality. 07/19 this is a
              necessary function until the pull request gets accepted.
-            **kwargs: skimage.measure.marching_cubes_lewiner args (see below)
+            **kwargs: skimage.measure.marching_cubes args (see below)
 
         Returns:
             list: vertices, simplices, normals, values
@@ -183,7 +183,7 @@ class Solution(object):
         """
 
         if classic is True:
-            vertices, simplices, normals, values = measure.marching_cubes_lewiner(
+            vertices, simplices, normals, values = measure.marching_cubes(
                 scalar_field.reshape(self.grid.regular_grid.resolution[0],
                                      self.grid.regular_grid.resolution[1],
                                      self.grid.regular_grid.resolution[2]),
@@ -193,7 +193,7 @@ class Solution(object):
             )
 
         else:
-            vertices, simplices, normals, values = measure.marching_cubes_lewiner(
+            vertices, simplices, normals, values = measure.marching_cubes(
                 scalar_field.reshape(self.grid.regular_grid.resolution[0],
                                      self.grid.regular_grid.resolution[1],
                                      self.grid.regular_grid.resolution[2]),
@@ -245,7 +245,7 @@ class Solution(object):
         Compute all surfaces of the model given the geological features rules.
 
         Args:
-            **kwargs: skimage.measure.marching_cubes_lewiner args (see below)
+            **kwargs: skimage.measure.marching_cubes args (see below)
 
         Returns:
             list: vertices and edges

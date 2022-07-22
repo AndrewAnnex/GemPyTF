@@ -67,7 +67,7 @@ def get_gradient_minima(geo_data, GX,GY,GZ=np.nan, direction='z', ref='x'):
         raise AttributeError(str(direction) + "must be a cartesian direction, i.e. xyz")
 
     if ref == 'x':
-        v_gx0 = measure.marching_cubes_lewiner(gx, 0)[0]
+        v_gx0 = measure.marching_cubes(gx, 0)[0]
         v_gx = v_gx0
         v_gx[:, 0] = (v_gx0[:, 0] * vox_size_x)+geo_data.extent[0]
         v_gx[:, 1] = (v_gx0[:, 1] * vox_size_y)+geo_data.extent[2]
@@ -75,7 +75,7 @@ def get_gradient_minima(geo_data, GX,GY,GZ=np.nan, direction='z', ref='x'):
         return v_gx
 
     elif ref == 'y':
-        v_gy0 = measure.marching_cubes_lewiner(gy, 0)[0]
+        v_gy0 = measure.marching_cubes(gy, 0)[0]
         v_gy = v_gy0
         v_gy[:, 0] = (v_gy0[:, 0] * vox_size_x)+geo_data.extent[0]
         v_gy[:, 1] = (v_gy0[:, 1] * vox_size_y)+geo_data.extent[2]
@@ -85,8 +85,8 @@ def get_gradient_minima(geo_data, GX,GY,GZ=np.nan, direction='z', ref='x'):
     elif ref == 'mean':
         # using marching cubes to aquire surfaces (vertices, simplices) that align
         # with the occurrence of zeros of the gradients (gradient minima)
-        v_gx0 = measure.marching_cubes_lewiner(gx, 0)[0]
-        v_gy0 = measure.marching_cubes_lewiner(gy, 0)[0]
+        v_gx0 = measure.marching_cubes(gx, 0)[0]
+        v_gy0 = measure.marching_cubes(gy, 0)[0]
 
         v_gx = v_gx0
         v_gx[:, 0] = (v_gx0[:, 0] * vox_size_x) + geo_data.extent[0]
