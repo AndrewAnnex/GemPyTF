@@ -2,10 +2,10 @@ name: gempytf
 channels:
   - conda-forge
 dependencies:
-  - python==3.7
+  - python==3.8
   - pandas==0.24
   - numpy==1.17.0
-  - tensorflow
+  - tensorflow-cpu>=2.0.0
   - scikit-image
   - networkx
   - nptyping
